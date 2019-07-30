@@ -1,3 +1,16 @@
+/* Importing Russo one and Poppins fonts from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600|Russo+One&display=swap');
+
+:root{
+  --clr-primary:#fff;
+  --clr-green: #27AE60;
+  --clr-blue:#2F80ED;
+  --clr-red: #EB5757;
+  --grad-background: linear-gradient(119.36deg, #262B3E 0%, #1D415A 100%);
+  --font-ruso-one: "Russo One" ,sans-serif;
+  --font-poppins: "Poppins" ,sans-serif;
+}
+
 *,
 *::after,
 *::before {
@@ -6,22 +19,102 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: sans-serif;
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
   height: 100vh;
+  background: var(--grad-background);
+  color: var(--clr-primary);
+  font-size: 16px;
 }
 
+/* Buttons */
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 1.4em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  background: #262B3E;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: 0;
+  margin-right: 1.5rem;
+}
+
+
+.btn-icon{
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.btn-green{
+  background: var(--clr-green);
+}
+.btn-red{
+  background: var(--clr-red);
+}
+.btn-blue{
+  background: var(--clr-blue);
+}
+
+
+
+
+.header{
+  padding: 2em 0;
+  width: 80vw;
+  margin:auto;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+}
+
+.logo-title{
+  margin-left: 1.5rem;
+  font-weight: 400;
+}
+
+/* Main */
 .clock-wrapper {
+  font-family: var(--font-ruso-one);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%,-50%);
+}
+
+.stopwatch{
+  font-size: 8rem;
+  margin-bottom: .4rem;
+  width: 0;
+  transform: translateX(-210px);
 }
 
 .seconds::before{
   content:":";
+  margin: 5px;
 }
 
-.seconds::after{
-  content: "."
+.milli-seconds::before{
+  content: ".";
+}
+
+.milli-seconds{
+  font-size: 3rem; 
+}
+.buttons-container{
+  display: flex;
+  justify-content: space-around;
 }

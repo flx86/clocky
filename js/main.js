@@ -12,7 +12,13 @@ function formatTime(number) {
 function toggleStartStopButton (text){
   startStopBtn.classList.toggle("start");
   startStopBtn.classList.toggle("stop");
-  startStopBtn.innerText = text;
+  startStopBtn.classList.toggle("btn-green");
+  startStopBtn.classList.toggle("btn-red");
+  if (text === "start")
+   startStopBtn.innerHTML = `<i class="fas fa-play btn-icon"></i>${text}`
+  else
+    startStopBtn.innerHTML = `<i class="fas fa-stop btn-icon"></i>${text}`
+    
 }
 
 // OnLoad

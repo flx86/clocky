@@ -6,20 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>StopWatch</title>
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/82eb8ffe24.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <script defer src="js/stopwatch.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo">
+          <svg width="78" height="36" viewBox="0 0 78 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" width="57" height="8" rx="4" fill="#EB5757"/>
+          <rect x="21" y="14" width="57" height="8" rx="4" fill="#27AE60"/>
+          <rect y="28" width="57" height="8" rx="4" fill="#2F80ED"/>
+          </svg>
+        </div>
+        <h1 class="logo-title">Cloky</h1>
+      </div>
+    </header>
     <div class="clock-wrapper">
       <div class="stopwatch">
-        <span class="minutes"></span>
-        <span class="seconds"></span>
-        <span class="milli-seconds"></span>
+        <span class="minutes"></span><span class="seconds"></span><span class="milli-seconds"></span>
       </div>
       <div class="buttons-container">
-        <button class="btn reset">Reset</button>
-        <button class="btn start">start</button>
+        <button class="btn btn-blue reset"><i class="fas fa-undo btn-icon"></i>reset</button>
+        <button class="btn btn-green start"><i class="fas fa-play btn-icon"></i>start</button>
       </div>
     </div>
   </body>
