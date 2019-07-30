@@ -34,8 +34,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3em 1.4em;
+  padding: 0.3em .8em;
   font-size: 1.2rem;
+  min-width: 10rem;
   font-weight: 600;
   text-transform: capitalize;
   color: white;
@@ -62,9 +63,6 @@ body {
 .btn-blue{
   background: var(--clr-blue);
 }
-
-
-
 
 .header{
   padding: 2em 0;
