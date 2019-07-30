@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let stopWatch = new StopWatch(0, stopWatchElement);
 
-  // Add Functionality To Start/Stop Button
+  // Adds Functionality To Start/Stop Button
   startStopBtn.addEventListener("click", () => {
     if (startStopBtn.classList.contains("start")){
       stopWatch.start();
@@ -37,11 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  
-
+  // Adds Functionality To Reset Button
   resetLapBtn.addEventListener("click", ()=>{
-    if(resetLapBtn.classList.contains("reset"))
-      
+    if(resetLapBtn.classList.contains("reset")) 
       stopWatch.reset();
     else if(resetLapBtn.classList.contains("lap")){
       console.log ("marcar la vuelta");
@@ -49,5 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  // Adds keyup event listener
+  document.addEventListener("keyup", (event)=>{
+    if(event.code === "Space"){
+      if (startStopBtn.classList.contains("start")){
+        stopWatch.start();
+        toggleStartStopButton("stop");
+      }else {
+        stopWatch.stop()
+        toggleStartStopButton("start");
+      }
 
+    }else if (event.code === "KeyR"){
+      stopWatch.reset();
+    }
+  })
 });
